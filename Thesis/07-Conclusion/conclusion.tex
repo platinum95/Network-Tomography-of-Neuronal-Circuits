@@ -1,0 +1,27 @@
+\chapter{Conclusion}
+\label{chap:conc}
+% TODO: Summarise everything
+% TODO: Essentially restate the points from the introduction and abstract, but with a bit more insight into why the points were made.
+% TODO: Mutual information either can't be applied as dicrete-memoryless systems in this domain, or we need to collect substantially more data.
+% TODO: Delay can be estimated relatively accurately using cross-correlation.
+% TODO: Cell classification through filter characterisation gave promising results, but more research is needed before it can be useful.
+
+%%%%%
+
+The use of network theory in the biological domain is a field that will become increasingly important in the near future as the technology driving human-machine interfaces advances and matures. We have shown in this study that there are a number of promising applications of existing network theory to infer link-level and cell-type details. Conversely, we have also shown that some existing areas of information theory may not be applicable in this domain without adaption and research into better fitting the theory to the unique characteristics of cortical neuronal networks.
+
+\par
+
+We have shown that the use of cross-correlation of the soma-membrane measurement of two neuronal cell can be used to estimate the link-level delay between the cells, to a relatively high degree of accuracy. Such a characterisation of the delay may be applicable in the use of more complex network tomography to identify path delay in larger neuronal networks, however more research is required into increasing the robustness of such an estimator to obtain useful results.
+
+\par
+
+We have shown that the application of discrete-memoryless models to calculate the entropy and mutual information between two cells may not be applicable in the neuronal domain. There are a number of reasons for this, such as the differences in channel memory where the output of the discrete-memoryless model does not depend on previous inputs, whereas the neuronal channel does. Another possible explanation is the relatively short simulation length which may not contain sufficient data to obtain reliable measurements of the spike-encoded information. Regardless of the cause of the lack of correlation, it is clear that more work is needed to determine a satisfactory system that reliably models the information propagated through the cortical circuits.
+
+\par
+
+Finally, we have shown that the classification of neuronal cell types and sub-group types is possible through the characterisation of the cell's input-output impulse response. With an average accuracy of around 58\% across the layer, m-type, and e-type class groups, the SVM-based classifier outperforms decision tree, random forest, and even artificial neural network classifiers. We have also shown that the trained classifier can then be applied in the reconstruction of the cell-types in a various forms of the 4-leaf star topology, estimating the cell-type of each leaf node to a promising degree of accuracy. While the performance was indicative of a promising trend, it is clear that more research is required to improve the robustness of this form of classification to any usable degree.
+
+\par
+
+While the investigations carried out in this study were cursory in regard to the extremely wide scope of neurology, molecular communication, network tomography, and information theory, it is evident that the individual topics covered may be used in future for the robust and reliable network tomography of cortical neuronal molecular communication systems.
