@@ -12,6 +12,6 @@ More details in there too.
   
 *__Thesis__*  
 This folder has the tex files (and compiled PDF) of the full Thesis writeup, along with diagrams and such.  
-
-*__Research Paper__*
+  
+*__Research Paper__*  
 This folder has the tex files etc. for the research paper.
