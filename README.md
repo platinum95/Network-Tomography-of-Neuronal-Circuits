@@ -1,6 +1,9 @@
 # Network Tomography of Neuronal Circuits
+ [![DOI](https://zenodo.org/badge/181746034.svg)](https://zenodo.org/badge/latestdoi/181746034)
+ 
 Simulation, supporting framework, analysis, and writeup files for the research into the network tomography of cortical neuronal molecular communication systems.
-  
+
+
 ## Layout
 *__Data Analysis__*  
 This folder holds the MATLAB source files used in the analysis of the data pruduced by the neural simulations.  
