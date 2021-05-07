@@ -2,8 +2,9 @@
 % simulations
 
 % Input/output paths
-dataInputDirPath = "../neurpy_git/2cell_outputs2/";
-dataOutputPath = "./output_kFilt_allSyn_new.csv";
+%dataInputDirPath = "../Neurpy/2cell_outputs_allSyn/";
+dataInputDirPath = "../../offsite/2cell_outputs_freesel_topsyn/";
+% dataOutputPath = "./output_kFilt_allSyn_new.csv";
 
 % Get valid simulation files
 dataFilePaths = dir( dataInputDirPath + "*_probes.csv" );
@@ -43,11 +44,11 @@ parfor idx = 1:numFiles
 end
 
 % Convert cell to a table and use first row as variable names
-outputDataTable = cell2table( outputDataCell ( 2 : end, : ), ...
+outputMInfoDataTable = cell2table( outputDataCell ( 2 : end, : ), ...
                               'VariableNames', outputDataCell( 1 , : ) );
 
 % Write the table to a CSV file
-writetable( outputDataTable, dataOutputPath );
+%writetable( outputDataTable, dataOutputPath );
 
 % Function to read in 2-cell simulation data and analyse it, returning
 % the mutual information of the channel

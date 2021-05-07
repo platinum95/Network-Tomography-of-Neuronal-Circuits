@@ -2,8 +2,9 @@
 % of 2-cell simulations
 
 % Input/output paths
-dataInputDirPath = "../neurpy_git/2cell_outputs_allSyn/";
-dataOutputPath = "./outputProdNewWhatIsThis.csv";
+dataInputDirPath = "../../offsite/2cell_outputs_freesel_topsyn/";
+%dataInputDirPath = "../Neurpy/2cell_outputs_freesel_topsyn/";
+dataOutputPath = "./outputFeatures_offsite_freesel_topsyn.csv";
 
 % Get valid simulation files
 dataFilePaths = dir( dataInputDirPath + "*_probes.csv" );
@@ -22,6 +23,13 @@ parfor idx = 1:numFiles
     metaFilePath = strcat( dataInputDirPath, metaFilePath );
     probeFilePath = strcat( dataInputDirPath, probeFilePath );
     probeData = csvread( probeFilePath, 1 );
+    
+%    tailVolt = probeData( :, 3 );
+%    [ spikePeaks, spikePkLocs ] = findpeaks( tailVolt );
+%    spikePeaks = spikePeaks( spikePeaks > 0.0 );
+%    if ( length( spikePeaks ) < 2.0 )
+%        continue
+%    end
     
     jsonStr = fileread( metaFilePath );
     jsonData = jsondecode( jsonStr );
